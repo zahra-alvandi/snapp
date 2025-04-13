@@ -1,7 +1,7 @@
 @import url(../fonts/fa-Iran-sans-web-light.woff2);
 
 html {
-  font-size: 15px;
+  font-size: 100%;
   font-family: IRANSansX;
 }
 
@@ -9,8 +9,8 @@ html {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 12%;
+  padding-left: 12%;
 }
 
 @media (max-width: 575.98px) {
@@ -48,6 +48,11 @@ html {
     max-width: 1440px;
   }
 }
+@media (min-width: 1600) {
+  .container {
+    max-width: 1640px;
+  }
+}
 
 .navbar {
   height: 5.5rem;
@@ -70,4 +75,69 @@ html {
 .navbar__links li {
   margin-right: 2.2rem;
   font-weight: 200;
+}
+
+/* Hero section */
+
+.hero-section {
+  display: flex;
+}
+
+.hero-section__intro {
+  background-color: #21aa58;
+  color: white;
+  width: 50%;
+}
+
+.hero-section__pic {
+  background-image: url(../images/intro_desktop.jpg);
+  min-height: 60vh;
+  width: 50%;
+  background-position: center center;
+  background-size: cover;
+  transform: scaleX(-1);
+}
+
+.hero-section__intro_tagline {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section__intro_description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section__intro_sendlink {
+  display: flex;
+}
+
+.hero-section_sendlink_input {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.hero-section__intro_description .input__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999999px;
+  background-color: white;
+}
+
+.hero-section_sendlink_input input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  line-height: 3rem;
+  padding: 0 0.5rem;
+}
+
+.hero-section_sendlink_input input::placeholder {
+  color: white;
 }
