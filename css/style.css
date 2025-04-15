@@ -195,3 +195,54 @@ button {
   padding: 0 5rem;
 }
 
+/* intro of snapp apps */
+
+.intro-of-snapp-apps {
+  background-color: #f2f5f8;
+  /* padding: 10rem 0rem; */
+}
+
+.intro-of-snapp-apps_title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  padding: 2.5rem 0rem;
+  color: #333;
+  text-align: center;
+}
+
+.into-of-snapp-apps_item {
+  background-color: white;
+  border-radius: 1.125rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.intro-of-snapp-apps_item_info {
+  margin-right: 0.5rem;
+  padding: 1.125rem 0rem;
+}
+
+.intro-of-snapp-apps_item_info h3 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.intro-of-snapp-apps_item_info p {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.intro-of-snapp-apps_items > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.intro-of-snapp-apps_items {
+  display: grid;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 7rem;
+}
