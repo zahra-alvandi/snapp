@@ -287,6 +287,26 @@ p {
   font-weight: 300;
 }
 
+/* snapp benefits */
+
+.snapp-benefits {
+  position: relative;
+}
+
+.snapp-apps-benefits_container {
+  /* display: grid;
+  grid-template-columns: auto auto auto; */
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -60px;
+}
+
+.snapp-benefits__item {
+  width: 334px;
+  margin: 0 2rem;
+}
+
 .snapp-benefits__item_cover {
   background-color: #f2f5f8;
   display: flex;
@@ -298,5 +318,18 @@ p {
 .snapp-benefits-items {
   display: grid;
   grid-template-columns: repeat(3 1fr);
-  gap: 2rem;
+  gap: 4rem;
+  padding: 0 17rem;
+}
+
+.snapp-benefits__item_title {
+  font-size: 1.0675rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1rem 0rem;
+}
+
+.snapp-benefits__item_description {
+  font-size: 0.693125rem;
+  color: #333;
 }
