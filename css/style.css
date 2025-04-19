@@ -1,5 +1,6 @@
 @import url(../fonts/fa-Iran-sans-web-light.woff2);
 
+/* css variables */
 :root {
   --text-xs: 0.725rem;
   --text-sm: 0.875rem;
@@ -77,6 +78,10 @@ p {
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   /* box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.3); */
+  position: fixed;
+  width: 100%;
+  z-index: 1200;
+  top: 0;
 }
 
 .navbar__links {
@@ -89,15 +94,16 @@ p {
   align-items: center;
 }
 
-.navbar__links li {
+/* .navbar__links li {
   margin-right: 2.2rem;
   font-weight: 200;
-}
+} */
 
 /* Hero section */
 
 .hero-section {
   display: flex;
+  margin-top: 5.5rem;
 }
 
 .hero-section__intro {
@@ -347,4 +353,67 @@ p {
 .snapp-benefits__item_description {
   font-size: var(--text-xs);
   font-weight: 300;
+}
+
+/* dropdown menu */
+
+.navbar__links > li {
+  position: relative;
+  margin-right: 2.2rem;
+  font-weight: 200;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar__links > li > a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar__links .navbar__links_menu_item > a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar__links > li a:hover {
+  color: #00d170;
+  font-weight: 500;
+}
+
+.navbar__links > li:hover .navbar__links_menu {
+  display: block;
+  cursor: pointer;
+}
+
+.navbar__links .navbar__links_menu {
+  z-index: 50;
+  position: absolute;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+  top: 2rem;
+  right: -2rem;
+  display: none;
+}
+
+.navbar__links .navbar__links_menu_item {
+  padding: 0.75rem 1.5rem;
+  white-space: nowrap;
+  font-weight: 300;
+}
+
+.navbar__links .dropdwon_menu_icon {
+  transform: rotate(90deg);
+  width: 1rem;
+  height: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar__links_has_dropdown {
+  display: flex;
+}
+
+.navbar__links_has_dropdown span {
+  padding-left: 0.5rem;
 }
