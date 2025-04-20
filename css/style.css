@@ -25,6 +25,11 @@ p {
   line-height: 1.7;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* shared styles */
 .button {
   border: none;
@@ -475,7 +480,7 @@ p {
 .driver-registration__benefits {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem ;
+  gap: 2rem;
   margin: 2.5rem 0rem;
 }
 
@@ -494,4 +499,94 @@ p {
 
 .driver-registration__benefits_item .benefit-item-info p {
   font-size: var(--text-sm);
+}
+
+/* footer */
+
+.footer {
+  padding: 3rem 0;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__links li {
+  margin-left: 1rem;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem;
+}
+
+.footer__socials a {
+  margin-left: 0.5rem;
+}
+
+.footer__etemad {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* slider */
+
+.snapp-slider__section {
+  margin: 5rem 0;
+}
+
+.snapp-slider__wrapper {
+  padding: 0 7rem;
+  position: relative;
+}
+
+#snapp__slider {
+  border-radius: 1rem;
+}
+
+#snapp__slider .keen-slider__slide {
+  height: 25rem;
+  width: 100%;
+}
+
+#snapp__slider .keen-slider__slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.keen-dots-wrapper {
+  position: absolute;
+  z-index: 100;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: ltr;
+}
+
+.keen-dots-wrapper .keen-dots {
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.keen-dots-wrapper .keen-dots .dot {
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  margin: 0 0.2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.keen-dots-wrapper .keen-dots .dot.active {
+  background-color: white;
 }
