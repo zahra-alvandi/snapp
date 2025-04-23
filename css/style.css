@@ -109,19 +109,32 @@ a {
 }
 
 .navbar__links {
-  display: flex;
+  display: none;
 }
 
 .navbar__section {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /* .navbar__links li {
   margin-right: 2.2rem;
   font-weight: 200;
 } */
+
+@media (min-width: 992px) {
+  .navbar__links {
+    display: flex;
+  }
+  .navbar__section {
+    justify-content: start;
+  }
+  .navbar-menu-icon {
+    display: none;
+  }
+}
 
 /* Hero section */
 
@@ -368,12 +381,39 @@ a {
   .intro-of-snapp-apps_item_info h3 {
     text-align: start;
   }
+  .snapp-for-all-need {
+    display: flex;
+  }
+  .snapp-for-all-need__pic {
+    width: 50%;
+    height: 50vh;
+  }
+  .snapp-for-all-need__intro {
+    width: 50%;
+  }
+  .snapp-apps-benefits_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    left: 0;
+  }
+  .snapp-benefits-items {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    gap: 4rem;
+    padding: 0 17rem;
+  }
+  .snapp-for-all-need__intro {
+    padding-left: 15% !important;
+  }
 }
 
 /* supper app snapp */
 
 .snapp-for-all-need {
-  display: flex;
   /* padding-bottom: 15rem; */
   min-height: 700px;
 }
@@ -381,23 +421,24 @@ a {
 .snapp-for-all-need__pic {
   background-image: url(../images/super-app.jpg);
   height: 50vh;
-  width: 50%;
+  width: 100%;
   background-position: center center;
   background-size: cover;
   flex: 0 0 50%;
 }
 
 .snapp-for-all-need__intro {
-  width: 50%;
-  padding: 2rem;
-  padding-left: 15% !important;
+  width: 100%;
+  /* padding-left: 15% !important; */
   color: #333;
+  padding: 1rem 0;
 }
 
 .snapp-for-all-need__intro h2 {
   font-size: var(--text-xl);
   font-weight: bold;
   margin: 1rem 0;
+  padding: 0 2rem;
 }
 
 .snapp-for-all-need__intro p {
@@ -405,25 +446,19 @@ a {
   margin: 0.5rem 0rem;
   font-weight: 300;
   position: relative;
+  padding: 0 2rem;
 }
 
 /* snapp benefits */
+
+.snapp-apps-benefits_container {
+  padding-right: 1.5rem;
+}
 
 .snapp-benefits {
   display: flex;
   justify-content: center;
   position: relative;
-}
-
-.snapp-apps-benefits_container {
-  /* display: grid;
-  grid-template-columns: auto auto auto; */
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 1rem;
-  right: 0;
-  left: 0;
 }
 
 .snapp-benefits__item {
@@ -437,13 +472,14 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 1.125rem;
+  /* width: 428px; */
 }
 
 .snapp-benefits-items {
   display: grid;
-  grid-template-columns: repeat(3 1fr);
-  gap: 4rem;
-  padding: 0 17rem;
+  grid-template-columns: repeat(1 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .snapp-benefits__item_title {
@@ -525,13 +561,14 @@ a {
 
 .driver-registration {
   background-color: var(--background-primary);
-  padding: 4rem;
+  padding: 1rem;
 }
 
 .driver-registration__title {
   font-size: var(--text-3xl);
   font-weight: bold;
   text-align: center;
+  line-height: 1.5;
 }
 
 .driver-registration__title_description {
@@ -560,9 +597,9 @@ a {
 
 .driver-registration__benefits {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
-  margin: 2.5rem 0rem;
+  margin: 2rem 0;
 }
 
 .driver-registration__benefits_item {
@@ -570,16 +607,57 @@ a {
   border-radius: 1rem;
   padding: 2.5rem 1.5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .driver-registration__benefits_item .benefit-item-info h4 {
   font-weight: bold;
   padding: 1rem 0rem;
+  text-align: center;
+  line-height: 1.7;
 }
 
 .driver-registration__benefits_item .benefit-item-info p {
   font-size: var(--text-sm);
+  text-align: center;
+}
+
+.benefit-item-icon {
+  margin-bottom: 1rem;
+}
+
+.driver-registration {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .driver-registration {
+    padding: 4rem;
+    margin-top: 0;
+  }
+  .driver-registration__benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .driver-registration__benefits {
+    margin: 2.5rem;
+  }
+  .driver-registration__benefits_item {
+    flex-direction: row;
+  }
+  .benefit-item-icon {
+    margin-bottom: 0rem;
+  }
+  .driver-registration__benefits_item .benefit-item-info h4 {
+    text-align: right;
+  }
+
+  .driver-registration__benefits_item .benefit-item-info p {
+    text-align: right;
+  }
 }
 
 /* footer */
@@ -590,11 +668,17 @@ a {
 
 .footer__links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .footer__links li {
+  margin: 1rem 0;
   margin-left: 1rem;
+}
+
+.footer__links li:first-child {
+  margin-right: 1rem;
 }
 
 .footer__socials {
@@ -616,11 +700,11 @@ a {
 /* slider */
 
 .snapp-slider__section {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .snapp-slider__wrapper {
-  padding: 0 7rem;
+  padding: 0 1rem;
   position: relative;
 }
 
@@ -629,7 +713,7 @@ a {
 }
 
 #snapp__slider .keen-slider__slide {
-  height: 25rem;
+  height: 10rem;
   width: 100%;
 }
 
@@ -670,4 +754,22 @@ a {
 
 .keen-dots-wrapper .keen-dots .dot.active {
   background-color: white;
+}
+
+@media (min-width: 768px) {
+  #snapp__slider .keen-slider__slide {
+    height: 17rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .snapp-slider__section {
+    margin: 5rem 0rem;
+  }
+  .snapp-slider__wrapper {
+    padding: 0rem 7rem;
+  }
+  #snapp__slider .keen-slider__slide {
+    height: 25rem;
+  }
 }
